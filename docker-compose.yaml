@@ -1,7 +1,7 @@
 services:
   kong:
     image: kong:3.7
-    restart: on-failure:10
+    restart: on-failure
     ports:
       - 8000:8000
       - 8443:8443
@@ -22,7 +22,7 @@ services:
       KONG_ADMIN_ACCESS_LOG: /dev/stdout
       KONG_PROXY_ERROR_LOG: /dev/stderr
       KONG_ADMIN_ERROR_LOG: /dev/stderr
-      KONG_ADMIN_LISTEN: 0.0.0:8001
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001
       KONG_ADMIN_GUI_URL: http://localhost:8002
     volumes:
       - ./kong/declarative:/kong/declarative
