@@ -1,2 +1,344 @@
-_format_version: "3.0"
-_transform: true
+_format_version: '3.0'
+_transform: false
+consumers:
+- custom_id: ~
+  tags: []
+  id: 8bef0325-e978-4f07-8589-1682b49d6cf3
+  created_at: 1741478575
+  updated_at: 1741478575
+  username: keyssonAdm
+parameters:
+- created_at: ~
+  value: 1b44a367-5839-4e2a-a39d-df7bacdb85e1
+  key: cluster_id
+services:
+- path: ~
+  tls_verify: ~
+  tls_verify_depth: ~
+  name: API-vendas
+  protocol: http
+  enabled: true
+  write_timeout: 60000
+  id: 130bb346-0bf4-4646-8f60-7ed23058367e
+  port: 8080
+  client_certificate: ~
+  connect_timeout: 60000
+  tags: ~
+  read_timeout: 60000
+  retries: 5
+  created_at: 1741456628
+  updated_at: 1741456628
+  ca_certificates: ~
+  host: host.docker.internal
+routes:
+- request_buffering: true
+  preserve_host: false
+  name: Get-Estados
+  paths:
+  - /listarEstado
+  path_handling: v0
+  regex_priority: 0
+  id: 3b8050b4-913f-4886-af18-2b0c0b5b2150
+  service: 130bb346-0bf4-4646-8f60-7ed23058367e
+  response_buffering: true
+  hosts: ~
+  strip_path: false
+  snis: ~
+  sources: ~
+  https_redirect_status_code: 426
+  tags: []
+  protocols:
+  - http
+  - https
+  destinations: ~
+  created_at: 1741456748
+  updated_at: 1741457110
+  headers: ~
+  methods:
+  - GET
+- request_buffering: true
+  preserve_host: false
+  name: administrativo
+  paths:
+  - /administrativo
+  path_handling: v0
+  regex_priority: 0
+  id: 4ce5ddab-6e3e-410e-8d69-e0a007a1cd4c
+  service: 130bb346-0bf4-4646-8f60-7ed23058367e
+  response_buffering: true
+  hosts: ~
+  strip_path: false
+  snis: ~
+  sources: ~
+  https_redirect_status_code: 426
+  tags: []
+  protocols:
+  - http
+  - https
+  destinations: ~
+  created_at: 1741481570
+  updated_at: 1741481623
+  headers: ~
+  methods:
+  - GET
+- request_buffering: true
+  preserve_host: false
+  name: listarCidade
+  paths:
+  - /listarCidade
+  path_handling: v0
+  regex_priority: 0
+  id: cae6ce7a-6cb0-4c33-a3f0-5c38e13c65a2
+  service: 130bb346-0bf4-4646-8f60-7ed23058367e
+  response_buffering: true
+  hosts: ~
+  strip_path: false
+  snis: ~
+  sources: ~
+  https_redirect_status_code: 426
+  tags: []
+  protocols:
+  - http
+  - https
+  destinations: ~
+  created_at: 1741481655
+  updated_at: 1741481655
+  headers: ~
+  methods:
+  - GET
+- request_buffering: true
+  preserve_host: false
+  name: listarFornecedor
+  paths:
+  - /listarFornecedor
+  path_handling: v0
+  regex_priority: 0
+  id: d3baf0ec-19ec-45f2-a967-ced13a154a4f
+  service: 130bb346-0bf4-4646-8f60-7ed23058367e
+  response_buffering: true
+  hosts: ~
+  strip_path: false
+  snis: ~
+  sources: ~
+  https_redirect_status_code: 426
+  tags: []
+  protocols:
+  - http
+  - https
+  destinations: ~
+  created_at: 1741481718
+  updated_at: 1741481718
+  headers: ~
+  methods:
+  - GET
+- request_buffering: true
+  preserve_host: false
+  name: listarFuncionario
+  paths:
+  - /listarFuncionario
+  path_handling: v0
+  regex_priority: 0
+  id: d8bb3983-3d85-4585-923f-80e54a8459d5
+  service: 130bb346-0bf4-4646-8f60-7ed23058367e
+  response_buffering: true
+  hosts: ~
+  strip_path: false
+  snis: ~
+  sources: ~
+  https_redirect_status_code: 426
+  tags: []
+  protocols:
+  - http
+  - https
+  destinations: ~
+  created_at: 1741481685
+  updated_at: 1741481685
+  headers: ~
+  methods:
+  - GET
+- request_buffering: true
+  preserve_host: false
+  name: listarProduto
+  paths:
+  - /listarProduto
+  path_handling: v0
+  regex_priority: 0
+  id: fe997146-8285-4186-a2c7-70cfd8d4b42e
+  service: 130bb346-0bf4-4646-8f60-7ed23058367e
+  response_buffering: true
+  hosts: ~
+  strip_path: false
+  snis: ~
+  sources: ~
+  https_redirect_status_code: 426
+  tags: []
+  protocols:
+  - http
+  - https
+  destinations: ~
+  created_at: 1741481749
+  updated_at: 1741481749
+  headers: ~
+  methods:
+  - GET
+plugins:
+- consumer: ~
+  service: ~
+  route: ~
+  instance_name: ~
+  tags: ~
+  enabled: true
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+  id: aca707f0-bc50-4b79-8bec-66b8ee30b324
+  created_at: 1741479475
+  updated_at: 1741481772
+  config:
+    run_on_preflight: true
+    maximum_expiration: 0
+    uri_param_names:
+    - jwt
+    anonymous: ~
+    cookie_names: []
+    key_claim_name: iss
+    secret_is_base64: false
+    header_names:
+    - authorization
+    claims_to_verify:
+    - exp
+  name: jwt
+- consumer: ~
+  service: ~
+  route: 3b8050b4-913f-4886-af18-2b0c0b5b2150
+  instance_name: ~
+  tags: ~
+  enabled: false
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+  id: c0898d95-c129-4c81-8d10-c84e09e6529d
+  created_at: 1741478518
+  updated_at: 1741479320
+  config:
+    key_in_header: true
+    run_on_preflight: true
+    key_in_body: false
+    anonymous: ~
+    key_names:
+    - apikey
+    hide_credentials: false
+    realm: ~
+    key_in_query: false
+  name: key-auth
+upstreams:
+- slots: 10000
+  hash_on_cookie: ~
+  name: api-vendas
+  id: ae84fcc1-592f-4ef4-9220-1b09954fb559
+  hash_fallback: none
+  hash_fallback_header: ~
+  hash_fallback_query_arg: ~
+  hash_fallback_uri_capture: ~
+  algorithm: round-robin
+  client_certificate: ~
+  healthchecks:
+    passive:
+      type: http
+      unhealthy:
+        http_failures: 0
+        tcp_failures: 0
+        http_statuses:
+        - 429
+        - 500
+        - 503
+        timeouts: 0
+      healthy:
+        http_statuses:
+        - 200
+        - 201
+        - 202
+        - 203
+        - 204
+        - 205
+        - 206
+        - 207
+        - 208
+        - 226
+        - 300
+        - 301
+        - 302
+        - 303
+        - 304
+        - 305
+        - 306
+        - 307
+        - 308
+        successes: 0
+    threshold: 0
+    active:
+      type: http
+      https_sni: ~
+      https_verify_certificate: true
+      healthy:
+        interval: 0
+        http_statuses:
+        - 200
+        - 302
+        successes: 0
+      timeout: 1
+      concurrency: 10
+      http_path: /
+      headers: ~
+      unhealthy:
+        http_failures: 0
+        http_statuses:
+        - 429
+        - 404
+        - 500
+        - 501
+        - 502
+        - 503
+        - 504
+        - 505
+        interval: 0
+        tcp_failures: 0
+        timeouts: 0
+  hash_on: none
+  use_srv_name: false
+  host_header: ~
+  hash_on_header: ~
+  tags: ~
+  hash_on_query_arg: ~
+  created_at: 1741481010
+  updated_at: 1741481010
+  hash_on_cookie_path: /
+  hash_on_uri_capture: ~
+targets:
+- weight: 100
+  tags: []
+  upstream: ae84fcc1-592f-4ef4-9220-1b09954fb559
+  id: 8a0ea103-5bbf-4b6d-a077-5b08ceb192b5
+  created_at: 1741481053.418
+  updated_at: 1741481053.418
+  target: host.docker.internal:8080
+jwt_secrets:
+- algorithm: HS256
+  key: 7iJBuZZ4bzlAmb40zT5WEsyBJIckTFO7
+  secret: P0ewI8po0RTTnkRBEmUuSK6mu2rvKXWY
+  id: 49f74df2-5321-413a-bde5-8eef57f0061d
+  created_at: 1741479532
+  consumer: 8bef0325-e978-4f07-8589-1682b49d6cf3
+  rsa_public_key: ~
+  tags: ~
+keyauth_credentials:
+- key: Kp1AycmjBiWdHRJ5wFItTWOuBcSvQy8i
+  tags: ~
+  id: 5958198f-f783-49b3-a511-13261d926e35
+  created_at: 1741478609
+  consumer: 8bef0325-e978-4f07-8589-1682b49d6cf3
+  ttl: ~
