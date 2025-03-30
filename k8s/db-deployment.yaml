@@ -18,7 +18,7 @@ spec:
           image: postgres:13-alpine
           env:
             - name: POSTGRES_DB
-              value: kong
+              value: kong-db-postgres
             - name: POSTGRES_USER
               value: kong
             - name: POSTGRES_PASSWORD
