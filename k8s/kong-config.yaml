@@ -6,7 +6,7 @@ metadata:
 data:
   KONG_DATABASE: "postgres"
   KONG_PG_HOST: "kong-db-postgres"
-  KONG_PG_DATABASE: "kong"
+  KONG_PG_DATABASE: "kong-db-postgres"
   KONG_PG_USER: "kong"
   KONG_PG_PASSWORD: "kong"
   KONG_DECLARATIVE_CONFIG: "/kong/declarative/kong.yaml"
