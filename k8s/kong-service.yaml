@@ -39,7 +39,7 @@ spec:
             - name: KONG_DATABASE
               value: "postgres"
             - name: KONG_PG_HOST
-              value: "db"
+              value: "kong"
             - name: KONG_PG_USER
               value: "kong"
             - name: KONG_PG_PASSWORD
