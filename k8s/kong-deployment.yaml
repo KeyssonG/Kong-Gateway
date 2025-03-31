@@ -65,6 +65,7 @@ kind: Service
 metadata:
   name: kong-service
 spec:
+  type: LoadBalancer  # Expondo para a internet
   selector:
     app: kong
   ports:
