@@ -57,7 +57,7 @@ spec:
       volumes:
         - name: kong-config
           configMap:
-          name: kong-declarative-config
+            name: kong-declarative-config
 
 ---
 
