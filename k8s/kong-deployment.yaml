@@ -56,7 +56,7 @@ spec:
               mountPath: "/kong/declarative"
       volumes:
         - name: kong-config
-          emptyDir: {}
+          emptyDir: kong-declarative-config
 
 ---
 
