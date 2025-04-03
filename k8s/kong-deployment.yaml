@@ -38,7 +38,7 @@ spec:
             - name: KONG_PG_PASSWORD
               value: "kong"
             - name: KONG_DECLARATIVE_CONFIG
-              value: "/k8s/kong.yaml"
+              value: "/kong/declarative/kong.yaml"
             - name: KONG_PROXY_ACCESS_LOG
               value: "/dev/stdout"
             - name: KONG_ADMIN_ACCESS_LOG
