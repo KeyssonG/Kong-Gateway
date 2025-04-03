@@ -28,7 +28,7 @@ spec:
             - containerPort: 8004
           env:
             - name: KONG_DATABASE
-              value: "postgres"
+              value: "off"
             - name: KONG_PG_HOST
               value: "postgres-service"  # Corrigido para nome do serviço correto
             - name: KONG_PG_DATABASE
